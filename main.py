@@ -18,6 +18,7 @@ import pandas as pd
 
 x=[]
 y=[]
+com = []
 
 def drawImage(img):
   plt.imshow(img)
@@ -28,7 +29,7 @@ def func(img):
   km = KMeans(n_clusters=2)
   km.fit(all_pixels)
   centers = km.cluster_centers_
-  print(centers) 
+  com.append(centers)
   labels =km.labels_
   labels = labels.reshape((100,100))
   newImage = np.zeros((100,100))
@@ -73,6 +74,57 @@ for fname in timeaccord[:24]:
     func(imarray)
     final.append(imarray)
 
+cmx =[]
+for i in range(24):
+  if com[i][0]>com[i][1]:
+    cmx.append(com[i][0])
+  else:
+    cmx.append(com[i][1])
+
+cmx = np.array(cmx)
+cmx_predict = []
+cmx_predict2 =[]
+for i in range(4):
+  cmx_predict.append(cmx[i])
+for i in range(4):
+  cmx_predict2.append(cmx[i])
+for i in range(3,cmx.shape[0]):
+  dx = cmx[i-1]-cmx[i-2]
+  xt = cmx[i-1]+dx
+  xat = cmx[i]
+  dx2 = xat - xt
+  cmx_predict.append(xat+dx2)
+
+for i in range(3,cmx.shape[0]):
+  xt = (cmx[i-1]+cmx[i-2])/2
+  xat = cmx[i]
+  dx = xat-xt
+  xt1 = ((xat+xt)/2)+dx
+  cmx_predict2.append(xt1)
+plt.plot(cmx,'blue')
+plt.title("actual pixels value of cloud cluster center ")
+plt.xlabel("Image number")
+plt.ylabel("Pixel value")
+plt.show()
+plt.plot(cmx_predict,'red')
+plt.title("Predicted pixels value of cloud cluster center by algo1 ")
+plt.xlabel("Image number")
+plt.ylabel("Pixel value")
+plt.show()
+plt.plot(cmx_predict2,'black')
+plt.title("Predicted pixels value of cloud cluster center by algo2 ")
+plt.xlabel("Image number")
+plt.ylabel("Pixel value")
+plt.show()
+
+
+plt.plot(cmx,'blue')
+plt.plot(cmx_predict,'red')
+plt.plot(cmx_predict2,'black')
+plt.legend(['original','algo1',"algo2 plot"])
+plt.title("Comparision")
+plt.show()
+
 x=np.array(x)
 y=np.array(y)
 x_predict = []
@@ -96,15 +148,29 @@ for i in range(3,x.shape[0]):
 
 plt.plot(x, 'r')
 plt.plot(x_predict, 'b')
+plt.title("X coordinate actual to predicted by algo 1 comparision")
+plt.legend(['actual','algo1 predicted'])
+plt.xlabel('Image number')
+plt.ylabel('x coordinate')
 plt.show()
 plt.plot(y,'r')
 plt.plot(y_predict, 'b')
+plt.title("Y coordinate actual to predicted by algo 1 comparision")
+plt.legend(['actual','algo1 predicted'])
+plt.xlabel('Image number')
+plt.ylabel('Y coordinate')
 plt.show()
 plt.scatter(x,y)
 plt.plot(x,y,'r')
+plt.title("Actual center of mass value")
+plt.xlabel("x coordinates")
+plt.ylabel("y coordinates")
 plt.show()
 plt.scatter(x_predict,y_predict)
 plt.plot(x_predict,y_predict,'b')
+plt.title("Prediction by algo1 center of mass value")
+plt.xlabel("x coordinates")
+plt.ylabel("y coordinates")
 plt.show()
 
 plt.scatter(x,y,c="red")
@@ -133,15 +199,29 @@ for i in range(3,x.shape[0]):
 
 plt.plot(x, 'r')
 plt.plot(x_predict2, 'b')
+plt.title("X coordinate actual to predicted by algo 2 comparision")
+plt.legend(['actual','algo1 predicted'])
+plt.xlabel('Image number')
+plt.ylabel('x coordinate')
 plt.show()
 plt.plot(y,'r')
 plt.plot(y_predict2, 'b')
+plt.title("Y coordinate actual to predicted by algo 2 comparision")
+plt.legend(['actual','algo2 predicted'])
+plt.xlabel('Image number')
+plt.ylabel('Y coordinate')
 plt.show()
 plt.scatter(x,y)
 plt.plot(x,y,'r')
+plt.title("Actual center of mass value")
+plt.xlabel("x coordinates")
+plt.ylabel("y coordinates")
 plt.show()
 plt.scatter(x_predict2,y_predict2)
 plt.plot(x_predict2,y_predict2,'b')
+plt.title("Prediction by algo2 center of mass value")
+plt.xlabel("x coordinates")
+plt.ylabel("y coordinates")
 plt.show()
 
 print("Prediction of movement of cluster center\n")
@@ -150,6 +230,13 @@ print("Cloud cluster center moves to:",x_predict2[-1],y_predict2[-1])
 plt.scatter(x,y,c="red")
 plt.plot(x,y,'blue')
 plt.scatter(x_predict2[-1],y_predict2[-1],c="black")
+plt.show()
+
+plt.plot(x,y,'blue')
+plt.plot(x_predict,y_predict,'red')
+plt.plot(x_predict2,y_predict2,'black')
+plt.legend(['original','algo1',"algo2 plot"])
+plt.title("Comparision")
 plt.show()
 
 data = [[]]
