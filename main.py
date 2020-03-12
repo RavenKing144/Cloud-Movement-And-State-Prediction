@@ -89,7 +89,7 @@ for i in range(4):
 for i in range(4):
   cmx_predict2.append(cmx[i])
 for i in range(3,cmx.shape[0]):
-  dx = cmx[i-1]-cmx[i-2]
+  dx = cmx[i-1]-cmx[i-2] 
   xt = cmx[i-1]+dx
   xat = cmx[i]
   dx2 = xat - xt
@@ -175,7 +175,11 @@ plt.show()
 
 plt.scatter(x,y,c="red")
 plt.plot(x,y,'blue')
+plt.title("The predicted coordinates of center of mass by algo1 ")
+plt.xlabel("x coordinate")
+plt.ylabel("y coordinate")
 plt.scatter(x_predict[-1],y_predict[-1],c="black")
+print(x_predict[-1],y_predict[-1])
 plt.show()
 
 x_predict2 = []
@@ -230,12 +234,17 @@ print("Cloud cluster center moves to:",x_predict2[-1],y_predict2[-1])
 plt.scatter(x,y,c="red")
 plt.plot(x,y,'blue')
 plt.scatter(x_predict2[-1],y_predict2[-1],c="black")
+plt.title("The predicted coordinates of center of mass by algo2 ")
+plt.xlabel("x coordinate")
+plt.ylabel("y coordinate")
 plt.show()
 
 plt.plot(x,y,'blue')
 plt.plot(x_predict,y_predict,'red')
 plt.plot(x_predict2,y_predict2,'black')
 plt.legend(['original','algo1',"algo2 plot"])
+plt.xlabel("x coordinate")
+plt.ylabel("y coordinate")
 plt.title("Comparision")
 plt.show()
 
