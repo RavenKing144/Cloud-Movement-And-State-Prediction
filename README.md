@@ -1,8 +1,11 @@
 # Cloud-Movement-Prediction
 <pre>
+    •Project is inspired from given research paper
+<a href = "https://www.researchgate.net/publication/254048440_Automatically_adjusting_cloud_movement_prediction_model_from_satellite_infrared_images">    Automatically Adjusting Cloud Movement Prediction Model from Satellite .tiff Images</a>
     • Language used–python3
     • Software used–  Google Colab
     • Algorithms Used- Image Segmentation K-Means, Connected component labeling, Adjusted Mean Prediction Model,<br>      Convolutional   L.S.T.M.
+    • DataSet is collected from Smart India Hackathon 2020 I.S.R.O. problem statement and are of INSAT3D satellite
     • Formation cloud cluster by image segmentation and the higher cluster center values signifies dense cloud,<br>      finding the center of mass of all the points in cloud cluster and applying the adjusted mean prediction<br>      model to predict the value of the cluster after observing the data-set, after prediction the image of the<br>      cloud cluster is predicted using ConvLSTM. 
     • Mean Square value using basic prediction model = (9.153902775733735 12.212739659131664)
     • Mean Square value using basic adjusted mean prediction model = (5.924637760625794 7.139216633193592)
