@@ -7,32 +7,31 @@
     • Mean Square value using basic prediction model = (9.153902775733735 12.212739659131664)
     • Mean Square value using basic adjusted mean prediction model = (5.924637760625794 7.139216633193592)
     •Actual cloud image 
-    <img href =""></img>
+    <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/dataset%20sample%20image.png"></img>
     •Actual cloud cluster image 
-    <img href =""></img>
+    <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/image%20after%20component%20labeling.png"></img>
     •Actual cloud cluster centroid for given dataset 
-    <img href =""></img>
+    <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/actual%20cloud%20cluster%20centroid%20pixel%20value.png"></img>
     •Actual cloud cluster center of mass of dataset
-       <img href =""></img>
-     x-coordinate
-    <img href =""></img>
-     y-coordinate
-    <img href =""></img>
+       <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/actual%20com%20values.png"></img>
     •Cloud cluster centroid for given dataset by prediction model
-    <img href =""></img>
+    <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/cloud%20cluster%20centroid%20image%20by%20prediction%20model.png"></img>
     •Cloud cluster center of mass of dataset by prediction model
-       <img href =""></img>
+       <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/prediction%20model%20com%20values.png"></img>
      x-coordinate
-    <img href =""></img>
+    <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/x%20coordinate%20comparision%20between%20original%20and%20prediction%20model.png"></img>
      y-coordinate
-    <img href =""></img>
+    <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/y%20coordinate%20comparision%20between%20original%20and%20prediction%20model.png"></img>
      •Cloud cluster centroid for given dataset by adjusted mean prediction model
-    <img href =""></img>
+    <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/adjusted%20mean%20prediction%20model%20centroid%20value%20of%20cluster.png"></img>
     •Cloud cluster center of mass of dataset by adjusted mean prediction model
-       <img href =""></img>
+       <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/adjusted%20mean%20com%20values.png"></img>
      x-coordinate
-    <img href =""></img>
+    <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/x%20coordinate%20comparision%20between%20original%20and%20adjusted%20mean%20prediction%20model.png"></img>
      y-coordinate
-    <img href =""></img>
-    
+    <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/y%20coordinate%20comparision%20between%20original%20and%20adjusted%20mean%20%20prediction%20model.png"></img>
+    •Comparision of actual and 2 predicted model of cluster centroid pixel values
+    <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/comparision%20of%20centfroid%20of%20cloud%20cluster%5C.png"></img>
+    •Comparision of actual and 2 predicted model of cluster center of mass values
+    <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/comparision%20of%20com.png"></img>
 </pre>
