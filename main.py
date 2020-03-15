@@ -60,7 +60,7 @@ def func(img):
   plt.scatter(xint/count,yint/count,c='blue')
   drawImage(newImage)
 
-dirname = '/content/drive/My Drive/INSAT3D_VIS_India/Train'
+dirname = './DataSet/'
 timeaccord= []
 for fname in os.listdir(dirname):
   timeaccord.append(fname)
