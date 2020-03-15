@@ -31,7 +31,7 @@ def drawImage(img, title = "image"):
 from google.colab import drive
 drive.mount('/content/drive')
 
-dirname = '/content/drive/My Drive/INSAT3D_VIS_India/Train'
+dirname = './DataSet/'
 timeaccord= []
 for fname in os.listdir(dirname):
   timeaccord.append(fname)
