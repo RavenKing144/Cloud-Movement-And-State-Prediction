@@ -36,6 +36,6 @@
     <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/comparision%20of%20centfroid%20of%20cloud%20cluster%5C.png"></img>
     •Comparision of actual and 2 predicted model of cluster center of mass values
     <img src ="https://github.com/RavenKing144/Cloud-Movement-And-State-Prediction/blob/master/Images/comparision%20of%20com.png"></img>
-    • Mean Square value using basic prediction model = (9.153902775733735 12.212739659131664)
-    • Mean Square value using basic adjusted mean prediction model = (5.924637760625794 7.139216633193592)
+    • Mean Square value using basic prediction model = (0.93153902775733735 0.212739659131664)
+    • Mean Square value using basic adjusted mean prediction model = (0.924637760625794 0.139216633193592)
 </pre>
